@@ -26,6 +26,7 @@ for line in sys.stdin:
       cnt = Counter(mapped_digits)
       total_1 += sum(cnt[pos2canon[i]] for i in [1, 4, 7, 8])
       total_2 += sum(10 ** (4 - i - 1) * canon2pos[mapped_digits[i]] for i in range(4))
+      break
 
 print(total_1)
 print(total_2)
